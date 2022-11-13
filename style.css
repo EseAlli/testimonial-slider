@@ -104,3 +104,13 @@ blockquote {
   -moz-box-shadow: -21px 50px 16px -36px rgba(32, 32, 70, 0.19);
   box-shadow: -21px 50px 16px -36px rgba(32, 32, 70, 0.19);
 }
+
+.name {
+  font-weight: 700;
+  margin: 0.25rem 0;
+}
+
+.role {
+  color: var(--grayish-blue);
+  font-weight: 500;
+}
