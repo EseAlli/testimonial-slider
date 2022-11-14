@@ -17,20 +17,22 @@ body {
   background-position: bottom;
   font-family: "Inter", sans-serif;
   background-size: contain;
+  display: flex;
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 800px; */
   margin: auto;
+  width: 100%;
 }
 
 section {
   width: 90%;
   margin: 0 auto;
   padding: 2rem 0;
+  max-width: 800px;
 }
 
 .slider {
@@ -40,6 +42,8 @@ section {
   background-repeat: no-repeat;
   padding: 2rem 0;
   position: relative;
+  order: 1;
+  max-width: 350px;
 }
 
 .slider div {
@@ -70,7 +74,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  /* width: 95%; */
+  position: relative;
   margin: 0 auto;
   text-align: center;
 }
@@ -86,12 +90,15 @@ section {
   background-size: 50px;
   padding: 1.25rem 0;
   position: relative;
+  order: 2;
+  max-width: 400px;
 }
 
 blockquote {
   font-size: 1.125rem;
   line-height: 1.5rem;
   color: var(--dark-blue);
+  max-width: inherit;
 }
 
 .photo {
@@ -111,6 +118,70 @@ blockquote {
 }
 
 .role {
-  color: var(--grayish-blue);
+  color: var(--grayish-blue, black);
   font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-size: 50% 15%;
+    background-position: left bottom;
+  }
+
+  main {
+    margin: 5rem auto;
+  }
+
+  blockquote {
+    text-align: left;
+    width: 900px;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+
+  .testimony {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 650px;
+  }
+
+  .slider {
+    order: 2;
+    position: absolute;
+    right: 0;
+  }
+
+  .photo {
+    max-width: 400px;
+  }
+
+  .content {
+    order: 1;
+    text-align: start;
+  }
+
+  .name-role {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  blockquote {
+    max-width: 500px;
+    font-size: 1.5rem;
+  }
+
+  .testimony {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .content {
+    max-width: 50%;
+  }
+  blockquote {
+    font-size: 2rem;
+    max-width: 650px;
+  }
 }
