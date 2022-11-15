@@ -37,7 +37,8 @@ section {
 
 .slider {
   background-image: url(./images/pattern-bg.svg);
-  background-size: 320px;
+  background-size: cover;
+  background-position: center;
   /* width: 100%; */
   background-repeat: no-repeat;
   padding: 2rem 0;
@@ -124,7 +125,7 @@ blockquote {
   font-weight: 500;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   body {
     background-size: 50% 15%;
     background-position: left bottom;
