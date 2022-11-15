@@ -22,7 +22,7 @@ body {
 
 main {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   margin: auto;
   width: 100%;
@@ -32,18 +32,18 @@ section {
   width: 90%;
   margin: 0 auto;
   padding: 2rem 0;
-  max-width: 800px;
+  max-width: 1100px;
 }
 
 .slider {
   background-image: url(./images/pattern-bg.svg);
   background-size: 320px;
-  width: 100%;
+  /* width: 100%; */
   background-repeat: no-repeat;
   padding: 2rem 0;
   position: relative;
   order: 1;
-  max-width: 350px;
+  /* max-width: 350px; */
 }
 
 .slider div {
@@ -91,7 +91,7 @@ section {
   padding: 1.25rem 0;
   position: relative;
   order: 2;
-  max-width: 400px;
+  /* max-width: 400px; */
 }
 
 blockquote {
@@ -99,12 +99,14 @@ blockquote {
   line-height: 1.5rem;
   color: var(--dark-blue);
   max-width: inherit;
+  font-weight: 100;
 }
 
 .photo {
   width: 100%;
-  object-fit: contain;
-  max-width: 245px;
+  display: block;
+  /* object-fit: contain; */
+  /* max-width: 245px; */
   border-radius: 6px;
   vertical-align: middle;
   -webkit-box-shadow: -21px 50px 16px -36px rgba(32, 32, 70, 0.19);
@@ -128,10 +130,6 @@ blockquote {
     background-position: left bottom;
   }
 
-  main {
-    margin: 5rem auto;
-  }
-
   blockquote {
     text-align: left;
     width: 900px;
@@ -142,46 +140,52 @@ blockquote {
   .testimony {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 650px;
+    margin: 4.25rem auto;
   }
 
   .slider {
     order: 2;
     position: absolute;
     right: 0;
+    padding: 4rem 0;
+    background-size: cover;
+    background-position: left;
   }
 
   .photo {
-    max-width: 400px;
+    /* max-width: 400px; */
   }
 
   .content {
     order: 1;
     text-align: start;
+    background-position: 20% -20px;
+    background-size: 20% 28%;
+    padding: 4.5rem 0;
   }
 
   .name-role {
     align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 }
 
 @media (min-width: 992px) {
   blockquote {
-    max-width: 500px;
+    max-width: 550px;
     font-size: 1.5rem;
-  }
-
-  .testimony {
-    max-width: 750px;
   }
 }
 
 @media (min-width: 1280px) {
-  .content {
-    max-width: 50%;
+  .photo {
+    width: auto;
   }
   blockquote {
     font-size: 2rem;
-    max-width: 650px;
+    line-height: 2.75rem;
+    max-width: 625px;
   }
 }
