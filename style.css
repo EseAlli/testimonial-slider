@@ -32,7 +32,6 @@ section {
   width: 90%;
   margin: 0 auto;
   padding: 2rem 0;
-  max-width: 85%;
 }
 
 .slider {
@@ -67,6 +66,7 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
+  max-width: 325px;
 }
 
 .testimony {
@@ -103,11 +103,15 @@ blockquote {
   font-weight: 100;
 }
 
+picture {
+  display: flex;
+  justify-content: center;
+}
+
 .photo {
   width: 100%;
   display: block;
-  /* object-fit: contain; */
-  /* max-width: 245px; */
+  max-width: 500px;
   border-radius: 6px;
   -webkit-box-shadow: -21px 50px 16px -36px rgba(32, 32, 70, 0.19);
   -moz-box-shadow: -21px 50px 16px -36px rgba(32, 32, 70, 0.19);
@@ -135,6 +139,10 @@ blockquote {
     width: 900px;
     font-size: 1.5rem;
     line-height: 2.25rem;
+  }
+
+  .testimonials {
+    max-width: 85%;
   }
 
   .testimony {

@@ -26,6 +26,9 @@ function showSlides(n) {
     slideToDisplay.style.display = "grid";
 }
 prev.addEventListener("click", () => {
-    console.log("CLICKED");
     plusSlides(-1);
+});
+next.addEventListener("click", () => {
+    console.log("clicked");
+    plusSlides(1);
 });
