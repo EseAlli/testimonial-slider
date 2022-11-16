@@ -2,14 +2,13 @@
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 let slideIndex = 1;
-showSlides(slideIndex);
 function plusSlides(n) {
     showSlides((slideIndex += n));
 }
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("testimony");
-    let dots = document.getElementsByClassName("dot");
+    console.log(slides);
     n > slides.length
         ? (slideIndex = 1)
         : n < 1
@@ -28,7 +27,6 @@ function showSlides(n) {
 prev.addEventListener("click", () => {
     plusSlides(-1);
 });
-next.addEventListener("click", () => {
-    console.log("clicked");
+next === null || next === void 0 ? void 0 : next.addEventListener("click", function () {
     plusSlides(1);
 });
