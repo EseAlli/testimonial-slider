@@ -109,7 +109,6 @@ blockquote {
   /* object-fit: contain; */
   /* max-width: 245px; */
   border-radius: 6px;
-  vertical-align: middle;
   -webkit-box-shadow: -21px 50px 16px -36px rgba(32, 32, 70, 0.19);
   -moz-box-shadow: -21px 50px 16px -36px rgba(32, 32, 70, 0.19);
   box-shadow: -21px 50px 16px -36px rgba(32, 32, 70, 0.19);
@@ -161,6 +160,10 @@ blockquote {
     padding: 1rem;
     gap: 2.5rem;
     left: 20%;
+  }
+
+  .control:hover {
+    cursor: pointer;
   }
 
   .content {
