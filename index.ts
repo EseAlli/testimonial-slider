@@ -35,3 +35,21 @@ prev.addEventListener("click", () => {
 next?.addEventListener("click", function () {
   plusSlides(1);
 });
+
+document.onkeydown = function (e) {
+  console.log(e.code);
+  switch (e.code) {
+    case "37":
+      //left
+      e.preventDefault();
+      slideIndex--;
+      showSlides(slideIndex);
+      break;
+    case "39":
+      //right
+      e.preventDefault();
+      slideIndex++;
+      showSlides(slideIndex);
+      break;
+  }
+};
